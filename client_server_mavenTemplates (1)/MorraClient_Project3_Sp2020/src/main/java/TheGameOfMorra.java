@@ -155,44 +155,16 @@ public class TheGameOfMorra extends Application {
     hbox2.setAlignment(Pos.CENTER);
     
     
-    
     field2.setMaxSize(100, 10);
     field3.setMaxSize(100, 10);
     field4.setMaxSize(100, 10);
     field5.setMaxSize(100, 10);
-    
-
   
-//    VBox vboxpic = new VBox(v);
-//    vboxpic.setAlignment(Pos.TOP_CENTER);
-//    VBox vbox3 = new VBox(10, txt3,field2, txt4, field5 ,vboxpic);
-//  
-//    vbox3.setAlignment(Pos.TOP_LEFT);
-//    VBox vbox4 = new VBox(txt5,field3, txt6,field4 );
-//    vbox4.setAlignment(Pos.CENTER);
-//    vbox1.setAlignment(Pos.CENTER);
-//   
-//    // Adding things to borderpane
-//    pane.setTop(vbox3);
-//    pane.setLeft(vbox4);
-//    pane.setRight(vbox1);    
-//    pane.setBottom(hbox2); 
-//		
-		
-
-	primaryStage.setTitle("(Client) Let's Play Morra!!!");		
-
 	
+	primaryStage.setTitle("(Client) Let's Play Morra!!!");			
 	connectServer.setOnAction(e -> primaryStage.setScene(sceneMap1.get("scene2")));
 	sceneMap1.put("scene1",createScene1());
 	sceneMap1.put("scene2",createScene2());
-	
-//	
-	
-	
-//	Scene scene = new Scene(pane,700,550);
-//	primaryStage.setScene(scene);
-//	
 	
 	primaryStage.setScene(sceneMap1.get("scene1"));
 	//primaryStage.setScene(sceneMap1.get("scene2"));
@@ -203,10 +175,7 @@ public class TheGameOfMorra extends Application {
 		
 	} // end starter
 
-	
-	
-	
-	
+
 	//Creating helper function make first Scene
 	public Scene createScene1() {
 		BorderPane pane1= new BorderPane();
@@ -232,10 +201,7 @@ public class TheGameOfMorra extends Application {
 		hbox_pic.setAlignment(Pos.TOP_CENTER);		
 		txtIP.setFont(Font.font("Times", FontWeight.BOLD, 40));
 		txtPort.setFont(Font.font("Times", FontWeight.BOLD, 30));
-		
-		
-		
-		
+
 		HBox hboxs1 = new HBox( txtIP,enterIP );
 		HBox hboxs2 = new HBox( txtPort,enterPort);
 		VBox vboxs1 = new VBox(hboxs1,hboxs2);
@@ -251,14 +217,11 @@ public class TheGameOfMorra extends Application {
 		return new Scene(pane1, 700, 550);
 	}// end Scene one 
 	
-	
-	
+
 	//Creating helper function make Second Scene
 		public Scene createScene2() {
 			
-			BorderPane pane = new BorderPane();
-		
-
+			BorderPane pane = new BorderPane();		
 			Image pic = new Image("letsPlay.png");
 			ImageView v = new ImageView(pic);
 			v.setOpacity(0.20);
@@ -278,24 +241,11 @@ public class TheGameOfMorra extends Application {
 		    pane.setTop(vbox3);
 		    pane.setLeft(vbox4);
 		    pane.setRight(vbox1);    
-		    pane.setBottom(hbox2); 
-				
-			
+		    pane.setBottom(hbox2); 		
 		    pane.setStyle("-fx-background-color: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, indigo  40%);  ");
-			
-
-			
-			
+		
 			return new Scene(pane, 700, 550);
 		}// end scene two 
-		
-		
-		
-	
-	
-	
-	
-	
 	
 	
 }// end of TheGameOfMorra Application 
